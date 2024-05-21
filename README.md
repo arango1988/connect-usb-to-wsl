@@ -8,7 +8,7 @@ Follow steps at: https://learn.microsoft.com/en-us/windows/wsl/connect-usb
 
 Update WSL: `wsl --update`
 
-Using CMD run: `usbipd list`
+Open a Power Shell as Administrator and run: `usbipd list`
 
 This will list all USB devices connected. You should see something like:
 ```
