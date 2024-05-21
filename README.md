@@ -24,4 +24,5 @@ Take the busid of the USB device you need to work on and attach it to WSL (-w = 
 `usbipd attach -w --busid 1-2`
 
 This command is essential for using your USB device on WSL2: `sudo modprobe ftdi_sio`
+
 The FTDI device driver is often loaded automatically, but you might need to manually load it. Run sudo modprobe ftdi_sio to load the driver if it's not already active.
