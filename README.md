@@ -6,6 +6,8 @@ This repository is for personal use, helping me remember how to connect and test
 ## Steps
 Follow steps at: https://learn.microsoft.com/en-us/windows/wsl/connect-usb
 
+Update WSL: `wsl --update`
+
 Using CMD run: `usbipd list`
 
 This will list all USB devices connected. You should see something like:
@@ -20,3 +22,6 @@ BUSID  VID:PID    DEVICE                                                        
 
 Take the busid of the USB device you need to work on and attach it to WSL (-w = wsl):
 `usbipd attach -w --busid 1-2`
+
+This command is essential for using your USB device on WSL2: `sudo modprobe ftdi_sio`
+The FTDI device driver is often loaded automatically, but you might need to manually load it. Run sudo modprobe ftdi_sio to load the driver if it's not already active.
